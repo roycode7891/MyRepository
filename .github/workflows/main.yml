@@ -22,7 +22,7 @@ jobs:
         run: ./gradlew build
       - name: Docker build
         run: |
-          docker login -u ${{ roycode7891 }} -p ${{tmdrhkS@13!}}
+          docker login -u ${{roycode7891}} -p ${{tmdrhkS@13!}}
           docker build -t spring-cicd . 
           docker tag spring-cicd {도커 유저네임}/spring-cicd:${GITHUB_SHA::7}
           docker push {도커 유저네임}/spring-cicd:${GITHUB_SHA::7}
